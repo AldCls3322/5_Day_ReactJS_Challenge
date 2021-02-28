@@ -73,7 +73,7 @@ function Sidebar(props) {   //It receives the infromation of rooms collection of
 export default Sidebar
 
 const Container = styled.div`
-    background: #3F0E40;
+    background: ${({ theme }) => theme.sidebarbackground};
 `
 
 const WorkspaceContainer = styled.div`
@@ -84,7 +84,7 @@ const WorkspaceContainer = styled.div`
     align-items: center;
     padding-left: 19px;
     justify-content: space-between;
-    border-bottom: 1px solid  #532753;
+    border-bottom: 1px solid  ${({ theme }) => theme.sidebarbottom};
 `
 
 const Name = styled.div`
@@ -110,7 +110,7 @@ const MainChannels = styled.div`
 `
 
 const MainChannelItem = styled.div`
-    color: rgb(188,171,188);
+    color: ${({ theme }) => theme.sidebartext};
     display: grid;
     grid-template-columns: 15% auto;
     height: 28px;
@@ -118,12 +118,12 @@ const MainChannelItem = styled.div`
     padding-left: 19px;
     cursor: pointer;
     :hover {
-        background: #350D36;
+        background: ${({ theme }) => theme.sidebarhovercolor};
     }
 `
 
 const ChannelsContainer = styled.div`
-    color: rgb(188,171,188);
+    color: ${({ theme }) => theme.sidebartext};
     margin-top: 10px;
 `
 
@@ -147,6 +147,6 @@ const Channel = styled.div`
     padding-left: 19px;
     cursor: pointer;
     :hover {
-        background: #350D36;
+        background: ${({ theme }) => theme.sidebarhovercolor};
     }
 `
