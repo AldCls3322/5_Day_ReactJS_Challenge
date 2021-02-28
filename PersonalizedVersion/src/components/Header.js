@@ -41,7 +41,7 @@ const Container = styled.div`
     justify-content: center;
     // you can use justify-content: space-between;
     position: relative;
-    box-shadow: 0 1px 0 0 rgb(255 255 255 / 10%);
+    box-shadow: 0 1px 0 0 ${( { theme } ) => theme.borderbottom};
 
     button {
         position: absolute;
@@ -95,8 +95,9 @@ const Search = styled.div`
 
     input {
         width: 100%;
-        background-color: transparent;
+        background-color: ${( { theme } ) => theme.headsearch};
         // color: black;
+        border: 1px solid ${( { theme } ) => theme.headsearchborder};
         border: none;
         padding-left: 8px;
         padding-right: 8px;
@@ -107,7 +108,7 @@ const Search = styled.div`
 
     input:focus { // When you click to text the outline that is focused is different from the input modified, so we place that outline
         width: 100%;
-        // color: black;
+        color: ${( { theme } ) => theme.headsearchtext};
         outline: none;
     }
 `
