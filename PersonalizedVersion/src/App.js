@@ -15,7 +15,7 @@ function App() {
 
   const [rooms, setRooms] = useState([])  //useState is a database
   const [theme, setTheme] = useState('light')
-  const [ user, setUser ] = useState(JSON.parse(localStorage.getItem('user'))); //cretes a state and gets a value as user: 'setUser', then isnide it converts from a stringto an object
+  const [ user, setUser ] = useState(JSON.parse(localStorage.getItem('user'))); //cretes a state and gets a value as user: 'setUser', then isnide it converts from a string to an object
 
   const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')
